@@ -1,13 +1,16 @@
 # Import flask and its componets
 from flask import *
 import os
+from flask_cors import CORS
 
+# CORS => Cross Origin Resource Sharing
 
 # Import the pymysql module - It helps us to create a connection between python flask and my sql database
 import pymysql
 
 # Create a flask application and give it a name
 app = Flask(__name__)
+CORS(app)
 
 # Configure the location to where your product images will be saved on your application
 app.config["UPLOAD_FOLDER"] = "static/images"
